@@ -141,7 +141,7 @@ namespace HL7.Dotnetcore
         /// </summary>
         /// <param name="validate">Validate the message before serializing</param>
         /// <returns>string with HL7 message</returns>
-        public string SerializeMessage(bool validate)
+        public virtual string SerializeMessage(bool validate)
         {
             if (validate && !this.validateMessage())
                 throw new HL7Exception("Failed to validate the updated message", HL7Exception.BAD_MESSAGE);
